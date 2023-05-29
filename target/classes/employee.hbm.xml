@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="com.example.Employee" table="employee">
+
+		<!-- Primary Keys -->
+		<id name="eid" column="eid" >
+			<generator class="com.example.MyGenerator"/>
+		</id>
+		<timestamp name="ts" column="ts"/>
+
+		<!-- Non-Primary Keys -->
+		<property name="ename" column="ename" />
+		<property name="ecity" column="ecity" />
+
+	</class>
+
+</hibernate-mapping>
